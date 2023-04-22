@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.26.1)
+
+PROJECT(HELLO VERSION 0.1.0)
+
+include(CTest)
+enable_testing()
+
+SET(SRC_LIST main.c)
+
+MESSAGE(STATUS "This is BINARY dir " ${HELLO_BINARY_DIR})
+
+MESSAGE(STATUS "This is SOURCE dir " ${HELLO_SOURCE_DIR})
+
+ADD_EXECUTABLE(hello ${SRC_LIST})
+
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+
+include(CPack)

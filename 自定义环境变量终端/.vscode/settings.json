@@ -1,0 +1,35 @@
+{
+    "terminal.integrated.env.windows": {
+        "CMAKE_PATH": "D:\\Program Files\\Cmake\\cmake-3.26.3-x64\\bin",
+        "MINGW_PATH": "D:\\Program Files\\MinGW64\\bin",
+    },
+    "terminal.integrated.profiles.windows": {
+    
+        "Cmake MinGW CMD": {
+            "icon": "terminal-cmd",
+            "overrideName": true,
+            "path": [
+                "${env:windir}\\System32\\cmd.exe",
+            ],            
+            "args": [
+                "/k",
+                ".vscode\\init.bat",
+            ],
+        },
+        "Cmake MinGW PowerShell": {
+            "icon": "terminal-powershell",
+            "overrideName": true,
+            "path": [
+                "${env:windir}\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            ],            
+            "args": [
+                "-NoExit",
+                ".vscode\\init.ps1",
+            ],
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "Cmake MinGW PowerShell",
+    "cmake.configureOnOpen": false,
+    "cmake.cmakePath": "D:\\Program Files\\Cmake\\cmake-3.26.3-x64\\bin\\cmake.exe",
+    "cmake.generator": "MinGW Makefiles",
+}

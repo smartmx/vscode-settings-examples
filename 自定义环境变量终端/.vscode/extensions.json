@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "twxs.cmake",
+        "josetr.cmake-language-support-vscode",
+        
+    ],
+    "unwantedRecommendations": [
+        "espressif.esp-idf-extension",
+    ]
+}
