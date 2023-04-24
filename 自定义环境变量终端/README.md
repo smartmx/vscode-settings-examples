@@ -16,26 +16,26 @@
     ```
 
 2. 如果是`cmd`方式，修改`init.bat`，先增加下面这段：
-    ```json
+    ```cmd
     if "%TEST_HOME%" == "" (
         set TEST_HOME=%~dp0
         echo TEST_HOME not set. Setting to %~dp0
     )
     ```
     然后修改最后的环境变量表达式：
-    ```json
+    ```cmd
     set PATH=%CMAKE_PATH%;%MINGW_PATH%;%TEST_HOME%;%PATH%
     ```
 
 3. 如果是`powershell`方式，修改`init.ps1`，先增加下面这段：
-    ```json
+    ```powershell
     if ($null -eq $env:TEST_HOME) {
         $env:TEST_HOME="$PSScriptRoot"
         "TEST_HOME not set. Setting to $PSScriptRoot"
     }
     ```
     然后修改最后的环境变量表达式：
-    ```json
-    $env:PATH="$env:CMAKE_PATH;$env:MINGW_PATH;$env:PATH"
+    ```powershell
+    $env:PATH="$env:CMAKE_PATH;$env:MINGW_PATH;$env:TEST_HOME;$env:PATH"
     ```
     
